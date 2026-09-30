@@ -103,13 +103,13 @@ export const Upload: React.FC = () => {
       </div>
 
       {/* Main Drag & Drop Card */}
-      <div className="glass-card rounded-2xl p-8 border border-slate-800 shadow-xl">
+      <div className="glass-card rounded-2xl p-4 sm:p-8 border border-slate-800 shadow-xl">
         <div
           onDragEnter={handleDrag}
           onDragLeave={handleDrag}
           onDragOver={handleDrag}
           onDrop={handleDrop}
-          className={`border-2 border-dashed rounded-xl p-10 text-center transition-all duration-200 cursor-pointer ${
+          className={`border-2 border-dashed rounded-xl p-6 sm:p-10 text-center transition-all duration-200 cursor-pointer ${
             dragActive
               ? 'border-emerald-500 bg-emerald-500/10 scale-[1.01]'
               : 'border-slate-700 hover:border-slate-600 bg-slate-900/50'
@@ -210,8 +210,8 @@ export const Upload: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="mt-4 pt-4 border-t border-slate-800 flex items-center justify-between">
-                  <span className="text-[10px] font-mono text-slate-500 truncate max-w-[200px]">
+                <div className="mt-4 pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5">
+                  <span className="text-[10px] font-mono text-slate-500 truncate max-w-full sm:max-w-[200px]">
                     {scenario.filename}
                   </span>
 
@@ -220,6 +220,7 @@ export const Upload: React.FC = () => {
                     variant={isAutoApprove ? 'primary' : 'secondary'}
                     onClick={() => handleLoadDemoScenario(scenario)}
                     isLoading={isLoading}
+                    className="w-full sm:w-auto"
                     rightIcon={<ArrowRight className="w-3.5 h-3.5" />}
                   >
                     Ingest & Process

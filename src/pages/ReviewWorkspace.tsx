@@ -113,11 +113,12 @@ export const ReviewWorkspace: React.FC = () => {
         </div>
 
         {/* Action Controls */}
-        <div className="flex items-center gap-2.5">
+        <div className="flex flex-wrap sm:flex-nowrap items-center gap-2.5 w-full sm:w-auto">
           <Button
             size="sm"
             variant="danger"
             onClick={() => setIsRejectModalOpen(true)}
+            className="flex-1 sm:flex-initial justify-center"
             leftIcon={<XCircle className="w-4 h-4" />}
           >
             Reject Document
@@ -127,6 +128,7 @@ export const ReviewWorkspace: React.FC = () => {
             size="sm"
             onClick={() => approveMutation.mutate()}
             isLoading={approveMutation.isPending}
+            className="flex-1 sm:flex-initial justify-center"
             leftIcon={<CheckCircle2 className="w-4 h-4" />}
           >
             Approve & Trust

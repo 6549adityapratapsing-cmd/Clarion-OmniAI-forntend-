@@ -62,16 +62,16 @@ export const Dashboard: React.FC = () => {
   const recentDocs = docList?.documents || [];
 
   return (
-    <div className="space-y-8 animate-in fade-in duration-300">
+    <div className="space-y-6 sm:space-y-8 animate-in fade-in duration-300">
       {/* Top Banner & Quick Action */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900 to-emerald-950/40 border border-slate-800 shadow-xl">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900 to-emerald-950/40 border border-slate-800 shadow-xl">
         <div>
           <div className="flex items-center gap-2">
             <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono font-bold uppercase tracking-wider">
               Autonomous Document Intelligence
             </span>
           </div>
-          <h1 className="text-2xl font-bold tracking-tight text-white mt-1.5">
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white mt-1.5">
             Accounts Payable & Procurement Intelligence
           </h1>
           <p className="text-xs text-slate-400 mt-1 max-w-2xl">
@@ -79,19 +79,19 @@ export const Dashboard: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-3 w-full md:w-auto">
           <Link
             to="/review-queue"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-colors"
+            className="flex-1 sm:flex-initial justify-center flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-colors shrink-0"
           >
-            <CheckSquare className="w-4 h-4 text-amber-400" />
-            <span>Review Queue ({kpis?.pendingReviewDocuments || 0})</span>
+            <CheckSquare className="w-4 h-4 text-amber-400 shrink-0" />
+            <span className="truncate">Review Queue ({kpis?.pendingReviewDocuments || 0})</span>
           </Link>
           <Link
             to="/upload"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-semibold shadow-lg shadow-emerald-500/20 border border-emerald-400/30 transition-colors"
+            className="flex-1 sm:flex-initial justify-center flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-semibold shadow-lg shadow-emerald-500/20 border border-emerald-400/30 transition-colors shrink-0"
           >
-            <UploadCloud className="w-4 h-4" />
+            <UploadCloud className="w-4 h-4 shrink-0" />
             <span>Ingest Document</span>
           </Link>
         </div>

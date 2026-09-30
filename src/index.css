@@ -10,10 +10,26 @@
     --color-border: #1E293B;
   }
 
-  body {
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
     background-color: #0B0F19;
     color: #F8FAFC;
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Safe Area Support for Android & iOS notches */
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+  }
+
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top, 0px);
   }
 
   /* Custom subtle scrollbar */
