@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="clarionGrad" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981" />
+      <stop offset="0.5" stop-color="#06B6D4" />
+      <stop offset="1" stop-color="#3B82F6" />
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="#0B0F19" />
+  <rect x="2" y="2" width="28" height="28" rx="6" stroke="url(#clarionGrad)" stroke-width="1.5" />
+  <path d="M10 8H22C23.1046 8 24 8.89543 24 10V22C24 23.1046 23.1046 24 22 24H10C8.89543 24 8 23.1046 8 22V10C8 8.89543 8.89543 8 10 8Z" fill="#111827" stroke="#10B981" stroke-width="1.5" />
+  <path d="M12 13H20" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M12 16H18" stroke="#34D399" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M12 19H16" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" />
+  <circle cx="21" cy="20" r="3.5" fill="#0B0F19" stroke="#10B981" stroke-width="1.5" />
+  <path d="M23.5 22.5L26 25" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" />
+</svg>
